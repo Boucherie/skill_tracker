@@ -1,11 +1,14 @@
+<%= link_to 'New Account', root_path %>
+<%= link_to 'Login', root_path %>
+
+<h1>Posts</h1>
+
 <p id="notice"><%= notice %></p>
 
 <h4>Export data</h4>
 
 <%= link_to "CSV", posts_path(format: "csv")%>
 <%= link_to "Excel", posts_path(format: "xls")%>
-
-<h1>Posts</h1>
 
 <table>
   <thead>
