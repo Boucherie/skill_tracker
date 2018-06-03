@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-  get 'sessions/create'
-  get 'sessions/destroy'
   resources :posts
 
   # one user from user pov
   resource :users, only: %i(new create)
+  resource :sessions only: %i(new create destroy)
 
 
   root 'posts#index'
