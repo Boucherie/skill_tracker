@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   # one user from user pov
   resource :users, only: %i(new create)
-  resource :sessions only: %i(new create destroy)
+  resource :sessions, only: %i(new create destroy)
 
 
   root 'posts#index'
