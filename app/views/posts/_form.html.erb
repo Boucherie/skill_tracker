@@ -25,7 +25,14 @@
     <%= form.label :image %>
     <%= form.file_field :image %>
   </div>
-  
+
+  <div class="field">
+    <label for="choose-one">Is this your first post? </label>
+    <input type="radio" id="choose-yes" name="choose-one" value="">Yes
+    <input type="radio" id="choose-no" name="choose-one" value="">No <br>
+    <p>Welcome!</p>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
