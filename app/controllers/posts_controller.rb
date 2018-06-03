@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+
     @posts = Post.all
     # @import = User::Import.new
 
