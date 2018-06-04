@@ -13,18 +13,19 @@
     <p>
 
       <% def user_is_logged_in
-        false
+        session[:user_id]
        end
        %>
 
       <% if user_is_logged_in %>
         <%= link_to 'Logout', sessions_path %>
       <%else%>
-        <%= link_to 'New Account', new_users_path %>
-        <%= link_to 'Login', new_sessions_path %>
+        <%= link_to 'New Account ', new_users_path %>
+        |
+        <%= link_to ' Login', new_sessions_path %>
       <% end %>
     </p>
-    
+
     <%= yield %>
   </body>
 </html>
