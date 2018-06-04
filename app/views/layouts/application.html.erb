@@ -21,28 +21,22 @@
           <h1 class="title is-1">Skill Tracker</h1>
           <h2 class="subtitle">A summary</h2>
         </div>
-        <div class="">
           <p>
-            <% def user_is_logged_in
-              session[:user_id]
-             end
-             %>
-
-            <% if user_is_logged_in %>
-              <%= link_to 'Logout', sessions_path, method: :delete, class:"button is-primary is-inverted"%>
-            <%else%>
-              <%= link_to 'New Account ', new_users_path, class:"button is-primary is-inverted" %>
-              
-              <%= link_to ' Login', new_sessions_path, class:"button is-primary is-inverted" %>
+            <% if current_user %>
+              Hello <%= current_user.email %>
+              <%= link_to 'Logout', sessions_path, method: :delete %>
+            <% else %>
+              <%= link_to 'New Account', new_users_path %>
+              |
+              <%= link_to 'Login', new_sessions_path %>
             <% end %>
           </p>
-        </div>
 
       </div>
     </section>
     <div class="container is-fluid">
 
-      <%= yield %>
-    </div>
+    <%= yield %>
+  </div>
   </body>
 </html>
