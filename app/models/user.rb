@@ -3,7 +3,7 @@ class User < ApplicationRecord
 
   validates :email, presence: true
 
-  has_many: posts
+  has_many :posts
   # Password digest generation (happens automatically as virtual attribute)
   # def password=(password)
   #   @password = password
