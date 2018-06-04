@@ -1,15 +1,13 @@
 
-
-<h1>Posts</h1>
-
 <p id="notice"><%= notice %></p>
 
-<h4>Export data</h4>
+<h4 class="">Export data</h4>
+<p>
+<%= link_to "CSV ", posts_path(format: "csv"), class:"button is-info"%>
 
-<%= link_to "CSV", posts_path(format: "csv")%>
-<%= link_to "Excel", posts_path(format: "xls")%>
-
-<table>
+<%= link_to " Excel", posts_path(format: "xls"), class:"button is-info"%>
+</p>
+<table class="table table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
   <thead>
     <tr>
       <th>Title</th>
@@ -35,4 +33,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, class:"button is-link" %>
