@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
 
 
-    if u && u.authenticate(params[:session][:password])
+    if u &&  u.authenticate(params[:session][:password])
       # flash[:notice] = 'Login Successful'
       redirect_to root_url
     else
